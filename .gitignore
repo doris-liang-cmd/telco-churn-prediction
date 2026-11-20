@@ -1,0 +1,18 @@
+# IDE / env
+.idea/
+.vscode/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# data & outputs (大文件不入库)
+data/raw/*
+!data/raw/.gitkeep
+submissions/*
+!submissions/.gitkeep
+models/
+*.zip

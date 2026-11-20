@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churn"
+version = "0.1.0"
+description = "Customer churn prediction: EDA, feature engineering and XGBoost/LightGBM blending"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas>=2.0",
+    "scikit-learn>=1.3",
+    "xgboost>=2.0",
+    "lightgbm>=4.0",
+    "matplotlib",
+    "seaborn",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "optuna", "jupyter"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
